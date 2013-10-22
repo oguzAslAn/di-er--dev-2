@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+int a,b,c,d,e,f;
+printf("4 haneli bir sayi giriniz:");
+scanf("%d",&e);
+printf("\n");
+if(1000 <= e)//3 ve 3 den küçük basamaklı d küçük basamakları çıkartmak için
+{
+	if(e <= 9999 )//4 büyük basamaklı sayıları çıkartmak için 
+{
+a=e/1000;
+b=(e-(a*1000))/100;
+c=(e-(a*1000)-(b*100))/10;
+d=(e-(a*1000)-(b*100))-(c*10);
+
+printf("  binlik sayisi:%d\n",a);//binlik sayıları görüntülemek için
+printf("  yuzluk sayisi:%d\n",b);//yüzlük sayıları görüntülemek için
+printf("  onluk sayisi:%d\n",c);//onluk sayıları görüntülemek için
+printf("  birlik:%d\n",d);//birlik sayıları görüntülemek için
+}
+	else
+	{
+		printf("4 haneli bir sayi giriniz\n");//4 haneden büyük ise bunu gösterir
+	}
+}
+else
+{
+	printf("lutfen 4 haneli sayi giriniz");//4 haneden küçük ise bunu gösterir
+}
+printf("\n");
+
+system("pause");
+}
